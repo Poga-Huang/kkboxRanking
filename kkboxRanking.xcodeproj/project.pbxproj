@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		D6A3D66B2A231CCF00DBD7AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3D66A2A231CCF00DBD7AF /* AppDelegate.swift */; };
 		D6A3D66D2A231CCF00DBD7AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3D66C2A231CCF00DBD7AF /* SceneDelegate.swift */; };
-		D6A3D66F2A231CCF00DBD7AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3D66E2A231CCF00DBD7AF /* ViewController.swift */; };
 		D6A3D6722A231CCF00DBD7AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A3D6702A231CCF00DBD7AF /* Main.storyboard */; };
 		D6A3D6742A231CD300DBD7AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6A3D6732A231CD300DBD7AF /* Assets.xcassets */; };
 		D6A3D6772A231CD300DBD7AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A3D6752A231CD300DBD7AF /* LaunchScreen.storyboard */; };
+		D6A3D6802A231DC100DBD7AF /* RankingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3D67E2A231DC100DBD7AF /* RankingTableViewController.swift */; };
+		D6A3D6812A231DC100DBD7AF /* RankingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A3D67F2A231DC100DBD7AF /* RankingTableViewController.xib */; };
+		D6A3D6832A231EF600DBD7AF /* DownloadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3D6822A231EF500DBD7AF /* DownloadHelper.swift */; };
+		D6A3D6862A23251700DBD7AF /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3D6852A23251700DBD7AF /* APIModel.swift */; };
+		D6A3D6882A2326EC00DBD7AF /* RankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3D6872A2326EC00DBD7AF /* RankingViewModel.swift */; };
+		D6A3D68B2A2330FB00DBD7AF /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3D6892A2330FB00DBD7AF /* SongCell.swift */; };
+		D6A3D68C2A2330FB00DBD7AF /* SongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A3D68A2A2330FB00DBD7AF /* SongCell.xib */; };
+		D6A3D68E2A233C8A00DBD7AF /* SongCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3D68D2A233C8900DBD7AF /* SongCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D6A3D6672A231CCF00DBD7AF /* kkboxRanking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kkboxRanking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A3D66A2A231CCF00DBD7AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6A3D66C2A231CCF00DBD7AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D6A3D66E2A231CCF00DBD7AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D6A3D6712A231CCF00DBD7AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6A3D6732A231CD300DBD7AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6A3D6762A231CD300DBD7AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6A3D6782A231CD300DBD7AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6A3D67E2A231DC100DBD7AF /* RankingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewController.swift; sourceTree = "<group>"; };
+		D6A3D67F2A231DC100DBD7AF /* RankingTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingTableViewController.xib; sourceTree = "<group>"; };
+		D6A3D6822A231EF500DBD7AF /* DownloadHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadHelper.swift; sourceTree = "<group>"; };
+		D6A3D6852A23251700DBD7AF /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
+		D6A3D6872A2326EC00DBD7AF /* RankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewModel.swift; sourceTree = "<group>"; };
+		D6A3D6892A2330FB00DBD7AF /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
+		D6A3D68A2A2330FB00DBD7AF /* SongCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongCell.xib; sourceTree = "<group>"; };
+		D6A3D68D2A233C8900DBD7AF /* SongCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +72,28 @@
 			children = (
 				D6A3D66A2A231CCF00DBD7AF /* AppDelegate.swift */,
 				D6A3D66C2A231CCF00DBD7AF /* SceneDelegate.swift */,
-				D6A3D66E2A231CCF00DBD7AF /* ViewController.swift */,
+				D6A3D67E2A231DC100DBD7AF /* RankingTableViewController.swift */,
+				D6A3D67F2A231DC100DBD7AF /* RankingTableViewController.xib */,
+				D6A3D6852A23251700DBD7AF /* APIModel.swift */,
+				D6A3D6872A2326EC00DBD7AF /* RankingViewModel.swift */,
+				D6A3D6892A2330FB00DBD7AF /* SongCell.swift */,
+				D6A3D68D2A233C8900DBD7AF /* SongCellViewModel.swift */,
+				D6A3D68A2A2330FB00DBD7AF /* SongCell.xib */,
+				D6A3D6842A23240C00DBD7AF /* Tool */,
 				D6A3D6702A231CCF00DBD7AF /* Main.storyboard */,
 				D6A3D6732A231CD300DBD7AF /* Assets.xcassets */,
 				D6A3D6752A231CD300DBD7AF /* LaunchScreen.storyboard */,
 				D6A3D6782A231CD300DBD7AF /* Info.plist */,
 			);
 			path = kkboxRanking;
+			sourceTree = "<group>";
+		};
+		D6A3D6842A23240C00DBD7AF /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				D6A3D6822A231EF500DBD7AF /* DownloadHelper.swift */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +154,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6A3D6812A231DC100DBD7AF /* RankingTableViewController.xib in Resources */,
+				D6A3D68C2A2330FB00DBD7AF /* SongCell.xib in Resources */,
 				D6A3D6772A231CD300DBD7AF /* LaunchScreen.storyboard in Resources */,
 				D6A3D6742A231CD300DBD7AF /* Assets.xcassets in Resources */,
 				D6A3D6722A231CCF00DBD7AF /* Main.storyboard in Resources */,
@@ -138,9 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6A3D66F2A231CCF00DBD7AF /* ViewController.swift in Sources */,
 				D6A3D66B2A231CCF00DBD7AF /* AppDelegate.swift in Sources */,
+				D6A3D6802A231DC100DBD7AF /* RankingTableViewController.swift in Sources */,
 				D6A3D66D2A231CCF00DBD7AF /* SceneDelegate.swift in Sources */,
+				D6A3D68B2A2330FB00DBD7AF /* SongCell.swift in Sources */,
+				D6A3D6832A231EF600DBD7AF /* DownloadHelper.swift in Sources */,
+				D6A3D68E2A233C8A00DBD7AF /* SongCellViewModel.swift in Sources */,
+				D6A3D6862A23251700DBD7AF /* APIModel.swift in Sources */,
+				D6A3D6882A2326EC00DBD7AF /* RankingViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +252,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +306,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -292,9 +328,9 @@
 				INFOPLIST_FILE = kkboxRanking/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,9 +356,9 @@
 				INFOPLIST_FILE = kkboxRanking/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
