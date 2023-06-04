@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RankingTableViewController" customModule="kkboxRanking" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonStackView" destination="aEN-W9-JK2" id="OvA-Ep-AGp"/>
+                <outlet property="loadingView" destination="nQx-Ra-zhK" id="tDo-su-cXo"/>
+                <outlet property="rankTable" destination="DIJ-UZ-kvl" id="D3Y-Be-HGz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="typeButtons" destination="iA4-ci-gqQ" collectionClass="NSMutableArray" id="yh3-JV-jt8"/>
+                <outletCollection property="typeButtons" destination="dIH-wt-35n" collectionClass="NSMutableArray" id="TYe-jI-cWR"/>
+                <outletCollection property="typeButtons" destination="6xX-Bp-vsk" collectionClass="NSMutableArray" id="fs7-Zc-nNj"/>
+                <outletCollection property="typeButtons" destination="iRj-Og-ehR" collectionClass="NSMutableArray" id="WpG-ZA-POt"/>
+                <outletCollection property="typeButtons" destination="sdZ-GA-E3W" collectionClass="NSMutableArray" id="85h-3X-h1w"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DIJ-UZ-kvl">
+                    <rect key="frame" x="0.0" y="109" width="393" height="701"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="nQx-Ra-zhK">
+                    <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aEN-W9-JK2">
+                    <rect key="frame" x="10" y="69" width="373" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iA4-ci-gqQ">
+                            <rect key="frame" x="0.0" y="0.0" width="74.666666666666671" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="quickSelectSongTypeToScroll:" destination="-1" eventType="touchUpInside" id="yvF-Oi-NUV"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIH-wt-35n">
+                            <rect key="frame" x="74.666666666666657" y="0.0" width="74.666666666666657" height="30"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="quickSelectSongTypeToScroll:" destination="-1" eventType="touchUpInside" id="qBg-pc-7KK"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xX-Bp-vsk">
+                            <rect key="frame" x="149.33333333333334" y="0.0" width="74.333333333333343" height="30"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="quickSelectSongTypeToScroll:" destination="-1" eventType="touchUpInside" id="UkN-Fu-xUl"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRj-Og-ehR">
+                            <rect key="frame" x="223.66666666666666" y="0.0" width="74.666666666666657" height="30"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="quickSelectSongTypeToScroll:" destination="-1" eventType="touchUpInside" id="IWV-UM-XYL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdZ-GA-E3W">
+                            <rect key="frame" x="298.33333333333331" y="0.0" width="74.666666666666686" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="quickSelectSongTypeToScroll:" destination="-1" eventType="touchUpInside" id="H8r-2Z-cqQ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DIJ-UZ-kvl" secondAttribute="trailing" id="E4a-Ny-QSY"/>
+                <constraint firstItem="DIJ-UZ-kvl" firstAttribute="top" secondItem="aEN-W9-JK2" secondAttribute="bottom" constant="10" id="F5y-2Y-h16"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aEN-W9-JK2" secondAttribute="trailing" constant="10" id="Lbi-P7-uJy"/>
+                <constraint firstItem="aEN-W9-JK2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="T5O-d4-A3Q"/>
+                <constraint firstItem="nQx-Ra-zhK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XPc-dk-Lap"/>
+                <constraint firstItem="DIJ-UZ-kvl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZYF-9X-ijY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="DIJ-UZ-kvl" secondAttribute="bottom" constant="8" id="Zdi-iG-nko"/>
+                <constraint firstItem="nQx-Ra-zhK" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="f7j-hP-qcT"/>
+                <constraint firstItem="aEN-W9-JK2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="oNk-d1-Zpc"/>
+            </constraints>
+            <point key="canvasLocation" x="114" y="-11"/>
+        </view>
+    </objects>
+</document>

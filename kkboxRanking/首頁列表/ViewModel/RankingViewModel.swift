@@ -14,14 +14,9 @@ class RankingViewModel{
     private var subscriptions = Set<AnyCancellable>()
     
     @Published var loading :Bool = true
-    @Published var covertDataEnd:Bool = false
+    @Published var sections = [Section]()
+    @Published var currentSelectedType:SectionType = .Chinese
     
-    var chineseVM = [SongCellViewModel]()
-    var englishVM = [SongCellViewModel]()
-    var japaneseVM = [SongCellViewModel]()
-    var koreanVM = [SongCellViewModel]()
-    var taiwaneseVM = [SongCellViewModel]()
-     
     init(){
         setupBinding()
     }
@@ -29,10 +24,7 @@ class RankingViewModel{
     
     private func setupBinding(){
         $loading.sink { loading in
-            if !loading{
-                self.covertDataEnd = true
-            }
-            else{
+            if loading{
                 self.cleanAllData()
                 self.fetchAPIData()
             }
@@ -41,11 +33,7 @@ class RankingViewModel{
     }
     
     private func cleanAllData(){
-        chineseVM.removeAll()
-        englishVM.removeAll()
-        japaneseVM.removeAll()
-        koreanVM.removeAll()
-        taiwaneseVM.removeAll()
+        sections.removeAll()
     }
     
     private func fetchAPIData(){
@@ -65,25 +53,19 @@ class RankingViewModel{
     
     private func convertApiDataToTable(data:APIModel){
         
-        SongType.allCases.forEach { type in
+        var sectionBox = [Section]()
+        
+        SectionType.allCases.forEach { type in
+            let section = Section(type: type, items: [SongCellViewModel]())
             data.records.forEach { record in
-                if record.fields.SongType == type.rawValue{
-                    switch type{
-                    case .Chinese:
-                        chineseVM.append(SongCellViewModel(data: record))
-                    case .English:
-                        englishVM.append(SongCellViewModel(data: record))
-                    case .Japanese:
-                        japaneseVM.append(SongCellViewModel(data: record))
-                    case .Korean:
-                        koreanVM.append(SongCellViewModel(data: record))
-                    case .Taiwanese:
-                        taiwaneseVM.append(SongCellViewModel(data: record))
-                    }
+                if record.fields.SongType == type.typeName{
+                    section.items.append(SongCellViewModel(data: record))
                 }
             }
+            sectionBox.append(section)
         }
-    
+        
+        sections = sectionBox
         loading = false
     }
     

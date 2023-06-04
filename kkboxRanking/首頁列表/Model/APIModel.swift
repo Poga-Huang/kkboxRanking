@@ -7,14 +7,6 @@
 
 import Foundation
 
-enum SongType:String,CaseIterable{
-    case Chinese = "華語"
-    case English = "西洋"
-    case Japanese = "日語"
-    case Korean = "韓語"
-    case Taiwanese = "台語"
-}
-
 struct APIModel:Codable,Hashable{
     var records:[Records]
     struct Records:Codable,Hashable{

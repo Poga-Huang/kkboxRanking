@@ -19,6 +19,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         let rootViewController = RankingTableViewController(nibName: "\(RankingTableViewController.self)", bundle: nil)
         let nav = UINavigationController(rootViewController: rootViewController)
+        
+        let navigationBarAppearance = UINavigationBarAppearance()
+        navigationBarAppearance.configureWithTransparentBackground()
+        nav.navigationBar.standardAppearance = navigationBarAppearance
+        nav.navigationBar.scrollEdgeAppearance = navigationBarAppearance
+        
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
     }
