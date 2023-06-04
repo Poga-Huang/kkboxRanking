@@ -34,6 +34,7 @@ class SongCellViewModel:Hashable{
         setupBinding()
     }
     
+    //綁定點擊事件，當type改變執行delegate
     func setupBinding(){
         $clickFunctionType.sink { [weak self] type in
             guard let self = self ,let type = type else { return }

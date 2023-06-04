@@ -18,7 +18,8 @@ class MusicVideoViewController: UIViewController,WKNavigationDelegate {
     private var subscriptions = Set<AnyCancellable>()
     @Published var currentIndexPath:IndexPath
     
-    var viewModel:RankingViewModel
+    //ViewModel由push的VC提供
+    let viewModel:RankingViewModel
     
     init(viewModel:RankingViewModel,index:IndexPath){
         self.viewModel = viewModel
@@ -48,6 +49,7 @@ class MusicVideoViewController: UIViewController,WKNavigationDelegate {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: customBackButton())
         
     }
+    
     private func setupWebView(){
         let currentSection = viewModel.sections[currentIndexPath.section]
         let cellViewModel = currentSection.items[currentIndexPath.row]
