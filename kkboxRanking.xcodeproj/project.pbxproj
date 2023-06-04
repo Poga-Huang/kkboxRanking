@@ -91,13 +91,12 @@
 				D6DBE5692A2C3A6A00FE7009 /* Enum.swift */,
 				D6DBE5702A2C572E00FE7009 /* protocol.swift */,
 				D6DBE56B2A2C3CCF00FE7009 /* 首頁列表 */,
+				D6DBE57C2A2C883300FE7009 /* MV播放 */,
 				D6A3D6842A23240C00DBD7AF /* Tool */,
 				D6A3D6702A231CCF00DBD7AF /* Main.storyboard */,
 				D6A3D6732A231CD300DBD7AF /* Assets.xcassets */,
 				D6A3D6752A231CD300DBD7AF /* LaunchScreen.storyboard */,
 				D6A3D6782A231CD300DBD7AF /* Info.plist */,
-				D6DBE5722A2C598300FE7009 /* MusicVideoViewController.swift */,
-				D6DBE5732A2C598300FE7009 /* MusicVideoViewController.xib */,
 			);
 			path = kkboxRanking;
 			sourceTree = "<group>";
@@ -158,6 +157,15 @@
 				D6DBE5762A2C6BB400FE7009 /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		D6DBE57C2A2C883300FE7009 /* MV播放 */ = {
+			isa = PBXGroup;
+			children = (
+				D6DBE5722A2C598300FE7009 /* MusicVideoViewController.swift */,
+				D6DBE5732A2C598300FE7009 /* MusicVideoViewController.xib */,
+			);
+			path = "MV播放";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
