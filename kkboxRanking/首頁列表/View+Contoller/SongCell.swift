@@ -32,6 +32,7 @@ class SongCell: UITableViewCell {
         coverImageView.image = nil
     }
     
+    //MARK: Configure Cell 
     func configure(with viewModel: SongCellViewModel) {
         
         self.viewModel = viewModel
@@ -46,6 +47,7 @@ class SongCell: UITableViewCell {
         
     }
     
+    //MARK: Private Method
     private func imageBinding(){
         
         viewModel?.$coverImage
@@ -59,6 +61,16 @@ class SongCell: UITableViewCell {
         
     }
     
+    //MARK: IBAction
     
+    //播放音樂
+    @IBAction func clickPlayMusic(_ sender: UIButton) {
+        viewModel?.clickFunctionType = .PlayMusic
+    }
+    
+    //播放MV
+    @IBAction func clickPlayMusicVideo(_ sender: UIButton) {
+        viewModel?.clickFunctionType = .PlayMusicVideo
+    }
     
 }

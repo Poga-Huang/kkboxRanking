@@ -55,11 +55,15 @@ class RankingViewModel{
         
         var sectionBox = [Section]()
         
-        SectionType.allCases.forEach { type in
+        SectionType.allCases.enumerated().forEach { (index,type) in
+            
             let section = Section(type: type, items: [SongCellViewModel]())
+            
             data.records.forEach { record in
                 if record.fields.SongType == type.typeName{
-                    section.items.append(SongCellViewModel(data: record))
+                    let row = (record.fields.Rank as NSString).integerValue - 1
+                    
+                    section.items.append(SongCellViewModel(data: record,indexPath: IndexPath(row:row, section: index)))
                 }
             }
             sectionBox.append(section)

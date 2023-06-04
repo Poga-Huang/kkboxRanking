@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class SongCellViewModel:Hashable{
     
@@ -17,12 +18,27 @@ class SongCellViewModel:Hashable{
     func hash(into hasher: inout Hasher) {
         hasher.combine(data)
     }
+    //儲存所有綁訂
+    private var subscriptions = Set<AnyCancellable>()
     
     var data:APIModel.Records
+    var delegate:FunctionButtonDelegate?
+    let indexPath:IndexPath
+    
+    @Published var clickFunctionType:FunctionType?
     @Published var coverImage:UIImage?
     
-    init(data: APIModel.Records) {
+    init(data: APIModel.Records,indexPath:IndexPath) {
         self.data = data
+        self.indexPath = indexPath
+        setupBinding()
+    }
+    
+    func setupBinding(){
+        $clickFunctionType.sink { [weak self] type in
+            guard let self = self ,let type = type else { return }
+            delegate?.clickFunctionButton(type, withIndexPath: indexPath)
+        }.store(in: &subscriptions)
     }
     
     func getImage(){

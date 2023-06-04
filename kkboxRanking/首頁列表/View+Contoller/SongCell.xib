@@ -58,28 +58,47 @@
                             </label>
                         </subviews>
                     </stackView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cde-0C-9TC">
-                        <rect key="frame" x="356" y="36" width="30" height="28.666666666666671"/>
-                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="30" id="Qan-UT-IeY"/>
-                            <constraint firstAttribute="width" secondItem="cde-0C-9TC" secondAttribute="height" multiplier="1:1" id="eOq-08-Gny"/>
-                        </constraints>
-                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="c39-LJ-CAI">
+                        <rect key="frame" x="356" y="16" width="30" height="68"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9X-Bk-OFB">
+                                <rect key="frame" x="0.0" y="0.99999999999999822" width="30" height="28.666666666666664"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="play.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="clickPlayMusic:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jGH-bm-MSf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0E-4L-dqi">
+                                <rect key="frame" x="0.0" y="38" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="LWo-JX-tIM"/>
+                                    <constraint firstAttribute="width" secondItem="J0E-4L-dqi" secondAttribute="height" multiplier="1:1" id="NaP-QC-gid"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="YouTube"/>
+                                <connections>
+                                    <action selector="clickPlayMusicVideo:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="MKV-ps-Q6o"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <color key="backgroundColor" red="1" green="0.84313725490000002" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="99B-as-tGh" firstAttribute="leading" secondItem="enO-0x-vCh" secondAttribute="trailing" constant="8" id="7bb-wy-tcj"/>
+                    <constraint firstItem="c39-LJ-CAI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="OBu-Wu-bgE"/>
                     <constraint firstItem="BSa-hL-MVq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Rah-4b-B64"/>
+                    <constraint firstItem="c39-LJ-CAI" firstAttribute="leading" secondItem="99B-as-tGh" secondAttribute="trailing" constant="8" id="RxT-eh-aSI"/>
                     <constraint firstAttribute="bottom" secondItem="enO-0x-vCh" secondAttribute="bottom" constant="10" id="Tj0-Mk-CW2"/>
                     <constraint firstItem="99B-as-tGh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="WdD-52-hgy"/>
                     <constraint firstItem="enO-0x-vCh" firstAttribute="leading" secondItem="BSa-hL-MVq" secondAttribute="trailing" constant="8" id="ZHa-Mp-JNB"/>
-                    <constraint firstItem="cde-0C-9TC" firstAttribute="leading" secondItem="99B-as-tGh" secondAttribute="trailing" constant="8" id="af5-ym-lfV"/>
-                    <constraint firstItem="cde-0C-9TC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bJf-oZ-u5C"/>
+                    <constraint firstAttribute="trailing" secondItem="c39-LJ-CAI" secondAttribute="trailing" constant="8" id="fL5-5T-z0p"/>
                     <constraint firstItem="enO-0x-vCh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="r5f-Cb-AOy"/>
                     <constraint firstItem="enO-0x-vCh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="tqg-aT-nH9"/>
                     <constraint firstItem="BSa-hL-MVq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="u2L-ZJ-P6D"/>
-                    <constraint firstAttribute="trailing" secondItem="cde-0C-9TC" secondAttribute="trailing" constant="8" id="wIj-8n-Diu"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -95,6 +114,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="YouTube" width="50" height="50"/>
         <image name="play.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

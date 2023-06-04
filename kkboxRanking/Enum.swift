@@ -33,3 +33,8 @@ enum SectionType:Int,CaseIterable{
         return self.typeName + "年度單曲累積榜"
     }
 }
+
+enum FunctionType:String{
+    case PlayMusic = "音樂播放"
+    case PlayMusicVideo = "MV播放"
+}

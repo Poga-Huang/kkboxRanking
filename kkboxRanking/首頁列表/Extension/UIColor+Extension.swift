@@ -14,4 +14,5 @@ extension UIColor{
     static let selectedBackgroundColor = UIColor.black
     static let selectedBorderColor = UIColor(red: 248/255, green: 212/255, blue: 71/255, alpha: 1)
     static let selectedTextColor = UIColor(red: 248/255, green: 212/255, blue: 71/255, alpha: 1)
+    static let themeYellow = UIColor(red: 248/255, green: 212/255, blue: 71/255, alpha: 1)
 }

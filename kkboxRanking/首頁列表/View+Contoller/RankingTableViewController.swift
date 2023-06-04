@@ -87,6 +87,8 @@ class RankingTableViewController: UIViewController {
              let item = tableView.dequeueReusableCell(withIdentifier: "\(SongCell.self)", for: indexPath) as! SongCell
             
             item.configure(with: viewModel)
+            //點擊功能按鈕的Delegate
+            viewModel.delegate = self
             
             return item
         })
@@ -104,15 +106,14 @@ class RankingTableViewController: UIViewController {
                 snapShot.appendSections(sections)
                 
                 sections.forEach { section in
-                    //要指定給Section不然會出現Section Rows為0 執行捲動會Crash
+                    //坑：要指定給Section不然會出現Section Rows為0 執行捲動會Crash
                     snapShot.appendItems(section.items,toSection: section)
                 }
                 
                 self?.dataSource.apply(snapShot,animatingDifferences: false)
         }.store(in: &subscriptions)
         
-        //綁定viewModel的loading，loading開始轉圈，loading暫停轉圈
-        //loading中不可重新整理
+        //綁定viewModel的loading，loading開始轉圈，loading暫停轉圈，loading中不可重新整理
         viewModel.$loading
             .receive(on: RunLoop.main)
             .sink { [weak self] loading in
@@ -137,7 +138,6 @@ class RankingTableViewController: UIViewController {
     }
     
     @objc private func refresh(){
-        //已綁定viewModel的loading，當值改變監聽到可執行
         viewModel.loading = true
     }
 
