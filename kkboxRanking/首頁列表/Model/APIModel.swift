@@ -12,7 +12,8 @@ struct APIModel:Codable,Hashable{
     struct Records:Codable,Hashable{
         var fields:Fields
         struct Fields:Codable,Hashable{
-            var SongName:String
+            var WholeSongName:String
+            var ShortSongName:String
             var Rank:String
             var Singer:String
             var ReleaseDate:String

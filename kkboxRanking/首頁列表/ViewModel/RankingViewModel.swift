@@ -5,7 +5,7 @@
 //  Created by 黃柏嘉 on 2023/5/28.
 //
 
-import Foundation
+import UIKit
 import Combine
 
 class RankingViewModel{
@@ -16,6 +16,7 @@ class RankingViewModel{
     @Published var loading :Bool = true
     @Published var sections = [Section]()
     @Published var currentSelectedType:SectionType = .Chinese
+    @Published var selectedFunctionFromIndexPath:FunctionIndex?
     
     init(){
         setupBinding()
@@ -63,7 +64,7 @@ class RankingViewModel{
                 if record.fields.SongType == type.typeName{
                     let row = (record.fields.Rank as NSString).integerValue - 1
                     
-                    section.items.append(SongCellViewModel(data: record,indexPath: IndexPath(row:row, section: index)))
+                    section.items.append(SongCellViewModel(from: self,data: record,indexPath: IndexPath(row:row, section: index)))
                 }
             }
             sectionBox.append(section)

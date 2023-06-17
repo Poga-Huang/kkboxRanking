@@ -87,8 +87,6 @@ class RankingTableViewController: UIViewController {
              let item = tableView.dequeueReusableCell(withIdentifier: "\(SongCell.self)", for: indexPath) as! SongCell
             
             item.configure(with: viewModel)
-            //點擊功能按鈕的Delegate
-            viewModel.delegate = self
             
             return item
         })
@@ -134,6 +132,24 @@ class RankingTableViewController: UIViewController {
                 self?.resetButton()
                 self?.setSelectedButton(type)
                 
+            }.store(in: &subscriptions)
+        
+        viewModel.$selectedFunctionFromIndexPath
+            .sink { [weak self] functionIndex in
+                guard let self = self,
+                      let functionIndex = functionIndex,
+                      let type = functionIndex.type
+                else {
+                    return
+                }
+                
+                switch type{
+                case.PlayMusic:
+                    break
+                case.PlayMusicVideo:
+                    let mvvc = MusicVideoViewController(viewModel: viewModel)
+                    self.navigationController?.pushViewController(mvvc, animated: true)
+                }
             }.store(in: &subscriptions)
     }
     

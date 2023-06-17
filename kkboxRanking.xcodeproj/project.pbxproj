@@ -20,11 +20,17 @@
 		D6A3D68B2A2330FB00DBD7AF /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3D6892A2330FB00DBD7AF /* SongCell.swift */; };
 		D6A3D68C2A2330FB00DBD7AF /* SongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A3D68A2A2330FB00DBD7AF /* SongCell.xib */; };
 		D6A3D68E2A233C8A00DBD7AF /* SongCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3D68D2A233C8900DBD7AF /* SongCellViewModel.swift */; };
+		D6B9E44A2A388D5B002207EB /* PopoverHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B9E4492A388D5B002207EB /* PopoverHelper.swift */; };
+		D6B9E44C2A3894A9002207EB /* RightAngleBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B9E44B2A3894A9002207EB /* RightAngleBackgroundView.swift */; };
+		D6B9E4512A3896BA002207EB /* MVOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B9E44F2A3896BA002207EB /* MVOptionTableViewCell.swift */; };
+		D6B9E4522A3896BA002207EB /* MVOptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B9E4502A3896BA002207EB /* MVOptionTableViewCell.xib */; };
+		D6B9E4552A389F0A002207EB /* MVOptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B9E4532A389F0A002207EB /* MVOptionTableViewController.swift */; };
+		D6B9E4562A389F0A002207EB /* MVOptionTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B9E4542A389F0A002207EB /* MVOptionTableViewController.xib */; };
+		D6B9E4582A3DA768002207EB /* FunctionIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B9E4572A3DA768002207EB /* FunctionIndex.swift */; };
 		D6DBE5642A2C156200FE7009 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBE5632A2C156200FE7009 /* Section.swift */; };
 		D6DBE5662A2C204B00FE7009 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBE5652A2C204B00FE7009 /* UIColor+Extension.swift */; };
 		D6DBE5682A2C295200FE7009 /* RankingTableVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBE5672A2C295200FE7009 /* RankingTableVC+Extension.swift */; };
 		D6DBE56A2A2C3A6A00FE7009 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBE5692A2C3A6A00FE7009 /* Enum.swift */; };
-		D6DBE5712A2C572E00FE7009 /* protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBE5702A2C572E00FE7009 /* protocol.swift */; };
 		D6DBE5742A2C598300FE7009 /* MusicVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBE5722A2C598300FE7009 /* MusicVideoViewController.swift */; };
 		D6DBE5752A2C598300FE7009 /* MusicVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6DBE5732A2C598300FE7009 /* MusicVideoViewController.xib */; };
 		D6DBE5772A2C6BB400FE7009 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBE5762A2C6BB400FE7009 /* UIViewController+Extension.swift */; };
@@ -46,11 +52,17 @@
 		D6A3D6892A2330FB00DBD7AF /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 		D6A3D68A2A2330FB00DBD7AF /* SongCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongCell.xib; sourceTree = "<group>"; };
 		D6A3D68D2A233C8900DBD7AF /* SongCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCellViewModel.swift; sourceTree = "<group>"; };
+		D6B9E4492A388D5B002207EB /* PopoverHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverHelper.swift; sourceTree = "<group>"; };
+		D6B9E44B2A3894A9002207EB /* RightAngleBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightAngleBackgroundView.swift; sourceTree = "<group>"; };
+		D6B9E44F2A3896BA002207EB /* MVOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVOptionTableViewCell.swift; sourceTree = "<group>"; };
+		D6B9E4502A3896BA002207EB /* MVOptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVOptionTableViewCell.xib; sourceTree = "<group>"; };
+		D6B9E4532A389F0A002207EB /* MVOptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVOptionTableViewController.swift; sourceTree = "<group>"; };
+		D6B9E4542A389F0A002207EB /* MVOptionTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVOptionTableViewController.xib; sourceTree = "<group>"; };
+		D6B9E4572A3DA768002207EB /* FunctionIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionIndex.swift; sourceTree = "<group>"; };
 		D6DBE5632A2C156200FE7009 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		D6DBE5652A2C204B00FE7009 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		D6DBE5672A2C295200FE7009 /* RankingTableVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RankingTableVC+Extension.swift"; sourceTree = "<group>"; };
 		D6DBE5692A2C3A6A00FE7009 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
-		D6DBE5702A2C572E00FE7009 /* protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocol.swift; sourceTree = "<group>"; };
 		D6DBE5722A2C598300FE7009 /* MusicVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicVideoViewController.swift; sourceTree = "<group>"; };
 		D6DBE5732A2C598300FE7009 /* MusicVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicVideoViewController.xib; sourceTree = "<group>"; };
 		D6DBE5762A2C6BB400FE7009 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -89,10 +101,10 @@
 				D6A3D66A2A231CCF00DBD7AF /* AppDelegate.swift */,
 				D6A3D66C2A231CCF00DBD7AF /* SceneDelegate.swift */,
 				D6DBE5692A2C3A6A00FE7009 /* Enum.swift */,
-				D6DBE5702A2C572E00FE7009 /* protocol.swift */,
+				D6B9E44B2A3894A9002207EB /* RightAngleBackgroundView.swift */,
 				D6DBE56B2A2C3CCF00FE7009 /* 首頁列表 */,
 				D6DBE57C2A2C883300FE7009 /* MV播放 */,
-				D6A3D6842A23240C00DBD7AF /* Tool */,
+				D6A3D6842A23240C00DBD7AF /* Helper */,
 				D6A3D6702A231CCF00DBD7AF /* Main.storyboard */,
 				D6A3D6732A231CD300DBD7AF /* Assets.xcassets */,
 				D6A3D6752A231CD300DBD7AF /* LaunchScreen.storyboard */,
@@ -101,12 +113,13 @@
 			path = kkboxRanking;
 			sourceTree = "<group>";
 		};
-		D6A3D6842A23240C00DBD7AF /* Tool */ = {
+		D6A3D6842A23240C00DBD7AF /* Helper */ = {
 			isa = PBXGroup;
 			children = (
 				D6A3D6822A231EF500DBD7AF /* DownloadHelper.swift */,
+				D6B9E4492A388D5B002207EB /* PopoverHelper.swift */,
 			);
-			path = Tool;
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		D6DBE56B2A2C3CCF00FE7009 /* 首頁列表 */ = {
@@ -145,6 +158,7 @@
 			children = (
 				D6A3D6852A23251700DBD7AF /* APIModel.swift */,
 				D6DBE5632A2C156200FE7009 /* Section.swift */,
+				D6B9E4572A3DA768002207EB /* FunctionIndex.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,6 +178,10 @@
 			children = (
 				D6DBE5722A2C598300FE7009 /* MusicVideoViewController.swift */,
 				D6DBE5732A2C598300FE7009 /* MusicVideoViewController.xib */,
+				D6B9E4532A389F0A002207EB /* MVOptionTableViewController.swift */,
+				D6B9E4542A389F0A002207EB /* MVOptionTableViewController.xib */,
+				D6B9E44F2A3896BA002207EB /* MVOptionTableViewCell.swift */,
+				D6B9E4502A3896BA002207EB /* MVOptionTableViewCell.xib */,
 			);
 			path = "MV播放";
 			sourceTree = "<group>";
@@ -229,9 +247,11 @@
 				D6A3D6812A231DC100DBD7AF /* RankingTableViewController.xib in Resources */,
 				D6A3D68C2A2330FB00DBD7AF /* SongCell.xib in Resources */,
 				D6A3D6772A231CD300DBD7AF /* LaunchScreen.storyboard in Resources */,
+				D6B9E4562A389F0A002207EB /* MVOptionTableViewController.xib in Resources */,
 				D6A3D6742A231CD300DBD7AF /* Assets.xcassets in Resources */,
 				D6DBE5752A2C598300FE7009 /* MusicVideoViewController.xib in Resources */,
 				D6A3D6722A231CCF00DBD7AF /* Main.storyboard in Resources */,
+				D6B9E4522A3896BA002207EB /* MVOptionTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,13 +264,17 @@
 			files = (
 				D6DBE5642A2C156200FE7009 /* Section.swift in Sources */,
 				D6A3D66B2A231CCF00DBD7AF /* AppDelegate.swift in Sources */,
-				D6DBE5712A2C572E00FE7009 /* protocol.swift in Sources */,
+				D6B9E4582A3DA768002207EB /* FunctionIndex.swift in Sources */,
 				D6DBE5772A2C6BB400FE7009 /* UIViewController+Extension.swift in Sources */,
 				D6DBE56A2A2C3A6A00FE7009 /* Enum.swift in Sources */,
 				D6A3D6802A231DC100DBD7AF /* RankingTableViewController.swift in Sources */,
 				D6A3D66D2A231CCF00DBD7AF /* SceneDelegate.swift in Sources */,
 				D6A3D68B2A2330FB00DBD7AF /* SongCell.swift in Sources */,
+				D6B9E44C2A3894A9002207EB /* RightAngleBackgroundView.swift in Sources */,
 				D6A3D6832A231EF600DBD7AF /* DownloadHelper.swift in Sources */,
+				D6B9E44A2A388D5B002207EB /* PopoverHelper.swift in Sources */,
+				D6B9E4512A3896BA002207EB /* MVOptionTableViewCell.swift in Sources */,
+				D6B9E4552A389F0A002207EB /* MVOptionTableViewController.swift in Sources */,
 				D6DBE5742A2C598300FE7009 /* MusicVideoViewController.swift in Sources */,
 				D6A3D68E2A233C8A00DBD7AF /* SongCellViewModel.swift in Sources */,
 				D6DBE5682A2C295200FE7009 /* RankingTableVC+Extension.swift in Sources */,

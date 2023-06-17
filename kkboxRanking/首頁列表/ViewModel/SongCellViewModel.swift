@@ -22,30 +22,37 @@ class SongCellViewModel:Hashable{
     private var subscriptions = Set<AnyCancellable>()
     
     var data:APIModel.Records
-    var delegate:FunctionButtonDelegate?
     let indexPath:IndexPath
+    let viewModel:RankingViewModel
     
     @Published var clickFunctionType:FunctionType?
     @Published var coverImage:UIImage?
     
-    init(data: APIModel.Records,indexPath:IndexPath) {
+    init(from viewModel:RankingViewModel ,data: APIModel.Records,indexPath:IndexPath) {
         self.data = data
         self.indexPath = indexPath
+        self.viewModel = viewModel
         setupBinding()
     }
     
-    //綁定點擊事件，當type改變執行delegate
-    func setupBinding(){
-        $clickFunctionType.sink { [weak self] type in
-            guard let self = self ,let type = type else { return }
-            delegate?.clickFunctionButton(type, withIndexPath: indexPath)
-        }.store(in: &subscriptions)
+    private func setupBinding() {
+        /*
+        監聽到Cell改變了點擊的功能類別
+         將當前的indexPath與type塞給來源的ViewModel
+         讓ViewModel通知VC Push畫面
+        */
+        $clickFunctionType
+            .sink { [weak self] type in
+            guard let self = self, let type = type else { return }
+            
+                viewModel.selectedFunctionFromIndexPath = FunctionIndex(type: type,index: self.indexPath)
+            }.store(in: &subscriptions)
     }
     
     func getImage(){
         //儲存圖片，下次能取得圖片就無需重新下載
         let tempDirectory = FileManager.default.temporaryDirectory
-        let imageFileURL = tempDirectory.appendingPathComponent(data.fields.SongName)
+        let imageFileURL = tempDirectory.appendingPathComponent(data.fields.WholeSongName)
         if FileManager.default.fileExists(atPath: imageFileURL.path){
             let image = UIImage(contentsOfFile: imageFileURL.path)
             self.coverImage = image

@@ -16,14 +16,20 @@ class MusicVideoViewController: UIViewController,WKNavigationDelegate {
     
     //儲存所有綁訂
     private var subscriptions = Set<AnyCancellable>()
-    @Published var currentIndexPath:IndexPath
     
     //ViewModel由push的VC提供
     let viewModel:RankingViewModel
     
-    init(viewModel:RankingViewModel,index:IndexPath){
+    //右上選單按鈕
+    private lazy var optionButton:UIButton = {
+        let button = UIButton(frame: CGRect(origin: .zero, size: CGSize(width: 30, height: 30)))
+        button.setTitle("選單", for: .normal)
+        button.addTarget(self, action: #selector(popTableView), for: .touchDown)
+        return button
+    }()
+    
+    init(viewModel:RankingViewModel){
         self.viewModel = viewModel
-        self.currentIndexPath = index
         super.init(nibName: "\(MusicVideoViewController.self)", bundle: nil)
     }
     
@@ -36,6 +42,7 @@ class MusicVideoViewController: UIViewController,WKNavigationDelegate {
         
         initView()
         setupBinding()
+        setupWebView(dataIndex: viewModel.selectedFunctionFromIndexPath?.index)
     }
     
     //MARK: Private Method
@@ -48,20 +55,46 @@ class MusicVideoViewController: UIViewController,WKNavigationDelegate {
         self.navigationItem.leftBarButtonItem = nil
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: customBackButton())
         
+        self.navigationItem.rightBarButtonItem = nil
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: optionButton)
     }
     
-    private func setupWebView(){
-        let currentSection = viewModel.sections[currentIndexPath.section]
-        let cellViewModel = currentSection.items[currentIndexPath.row]
+    private func setupWebView(dataIndex:IndexPath?) {
+        guard let index = dataIndex else { return }
+        let currentSection = viewModel.sections[index.section]
+        let cellViewModel = currentSection.items[index.row]
         guard let urlString = cellViewModel.data.fields.MusicVideoURL else { return }
         guard let url = URL(string:urlString ) else { return }
         mvWebView.load(URLRequest(url:url))
     }
     
     private func setupBinding(){
-        $currentIndexPath.sink {[weak self] _ in
-            self?.setupWebView()
-        }.store(in: &subscriptions)
+        viewModel.$selectedFunctionFromIndexPath
+            .sink { [weak self] functionIndex in
+                guard let self = self,
+                      let functionIndex = functionIndex,
+                      let index = functionIndex.index
+                else {
+                    return
+                }
+                
+                self.setupWebView(dataIndex: index)
+                
+            }.store(in: &subscriptions)
+    }
+    
+    @objc private func popTableView(){
+        let optionTableVC = MVOptionTableViewController(viewModel: viewModel)
+        
+        optionTableVC.popover(on: self,
+                              sourceView:optionButton,
+                              preferredContentSize: CGSize(width: self.view.frame.width/2,
+                                                           height: self.view.frame.height),
+                              customInsets: UIEdgeInsets(top:36,
+                                                         left: 0,
+                                                         bottom: 0,
+                                                         right: 10),
+                              dismissHandler: nil)
     }
     
     //MARK: WKNavigationDelegate

@@ -39,7 +39,7 @@ class SongCell: UITableViewCell {
         let info = viewModel.data.fields
         
         rankLabel.text = info.Rank
-        songLabel.text = info.SongName
+        songLabel.text = info.WholeSongName
         singerLabel.text = info.Singer
         releaseDateLabel.text = info.ReleaseDate
         
